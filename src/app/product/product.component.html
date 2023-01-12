@@ -1,0 +1,33 @@
+<p>product works!</p>
+
+<p>
+    {{factname}}
+</p>
+
+<body>
+    <button name="create" (click)="create()">Create</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>type</th>
+                <th>View-Product</th>
+                <th>Update-product</th>
+                <th>Delete-product</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of plist">
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.quantity}}</td>
+                <td>{{p.type}}</td>
+                <td><button name="View" (click)="view(p)">View</button></td>
+                <td><button name="update" (click)="update(p)">update</button></td>
+                <td><button name="delete" (click)="delete(p)">delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>

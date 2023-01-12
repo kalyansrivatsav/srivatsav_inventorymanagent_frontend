@@ -1,0 +1,9 @@
+<p>Factories</p>
+
+<body>
+    <form [formGroup]="createfactform" (ngSubmit)="newfact()">
+        <p>Factory-Name<input class="name" type="text" formControlName="factname" name="name"></p>
+        <p>Location<input class="name" type="text" formControlName="factloc" name="location"></p>
+        <button class="submit" type="submit">Create</button>
+    </form>
+</body>

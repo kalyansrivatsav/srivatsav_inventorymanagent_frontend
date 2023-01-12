@@ -1,0 +1,26 @@
+<p>Factories</p>
+<body>
+    <button name="create" (click)="create()">Create</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Factory-Id</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>View-Products</th>
+                <th>Update-Factory</th>
+                <th>Delete-Factory</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let f of flist">
+                <td>{{f.id}}</td>
+                <td>{{f.name}}</td>
+                <td>{{f.location}}</td>
+                <td><button name="View" (click)="view(f)">View products</button></td>
+                <td><button name="update" (click)="update(f)">update</button></td>
+                <td><button name="delete" (click)="delete(f)">delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>

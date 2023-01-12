@@ -1,0 +1,11 @@
+<p>createproduct works!</p>
+
+<body>
+    <form [formGroup]="createprodform" (ngSubmit)="newprod()">
+        <p>Product-Name<input class="name" type="text" formControlName="prodname" name="name"></p>
+        <p>Quantity<input class="name" type="text" formControlName="prodquant" name="quantity"></p>
+        <p>Type<input class="name" type="text" formControlName="prodtype" name="type"></p>
+        <p>Document<input class="name" type="file"  name="file" (change)="getfile($event)"></p> 
+        <button class="submit" type="submit">Create</button>
+    </form>
+</body>
